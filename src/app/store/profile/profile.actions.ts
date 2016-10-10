@@ -20,7 +20,7 @@ export class profileActions {
     		  payload: profile
     	}
   	}
-
+sdf
   	static GET_PROFILE_FAILURE = '[profile] GET_PROFILE_FAILURE';
   	GET_PROFILE_FAILURE(id: string): Action  {
     	return {

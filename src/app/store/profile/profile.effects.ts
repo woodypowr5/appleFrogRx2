@@ -22,14 +22,3 @@ export class profileEffects {
 		.map(res => ({ type: '[profile] GET_PROFILE_SUCCESS', payload: res }));
 }
 
-// @Injectable()
-// export class profileEffects {
-// 	constructor(
-// 		private ProfileActions: profileActions,
-// 		private actions$: Actions
-// 	){}
-
-// 	@Effect() testEffect$ = this.actions$
-// 	.ofType('')
-// }
- 
