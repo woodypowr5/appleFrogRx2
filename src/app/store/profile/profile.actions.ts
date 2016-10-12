@@ -6,7 +6,7 @@ import "rxjs/Rx";
 @Injectable()
 export class profileActions {
 
-  	static GET_PROFILE = 'GET_PROFILE';
+  	static GET_PROFILE = '[profile] GET_PROFILE';
   	GET_PROFILE(id: string): Action  {
     	return {
       		type: profileActions.GET_PROFILE
@@ -20,7 +20,7 @@ export class profileActions {
     		  payload: profile
     	}
   	}
-sdf
+
   	static GET_PROFILE_FAILURE = '[profile] GET_PROFILE_FAILURE';
   	GET_PROFILE_FAILURE(id: string): Action  {
     	return {
