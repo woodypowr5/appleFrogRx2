@@ -7,8 +7,12 @@ import { AppComponent } from './app.component';
 import { profileReducer } from './store/profile/profile.reducer';
 
 import { Store, StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
+import { Actions, EffectsModule } from '@ngrx/effects';
+
+import { profileActions } from './store/profile/profile.actions';
 import { profileEffects } from './store/profile/profile.effects';
+
+import { ProfileService } from  './store/profile/profile.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,7 @@ import { profileEffects } from './store/profile/profile.effects';
     StoreModule.provideStore({ profile: profileReducer }),
     EffectsModule.run(profileEffects)
   ],
-  providers: [],
+  providers: [profileActions, ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
